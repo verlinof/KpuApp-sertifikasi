@@ -7,7 +7,6 @@
     android:orientation="vertical"
     android:background="@color/white"
     tools:context=".FormFragment">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -42,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:textColor="@color/cream"
                 android:layout_height="match_parent"
+                android:inputType="number"
                 android:id="@+id/text_nik" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:textColor="@color/cream"
+                android:textColor="@color/black"
                 android:layout_marginHorizontal="12dp"
                 android:text="Male" />
 
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="12dp"
                 android:textSize="16sp"
-                android:textColor="@color/cream"
+                android:textColor="@color/black"
                 android:text="Female" />
         </RadioGroup>
 
@@ -137,7 +137,7 @@
             android:layout_marginEnd="16dp"
             android:paddingHorizontal="12dp"
             android:background="@drawable/corner"
-            android:backgroundTint="@color/cream"
+            android:backgroundTint="@color/brown"
             android:textColor="@color/white"
             android:text="cek alamat"/>
 
@@ -156,6 +156,7 @@
             android:layout_margin="16dp"
             app:cardCornerRadius="20dp"
             android:clickable="true"
+            android:backgroundTint="@color/cream"
             android:id="@+id/card_image">
             <ImageView
                 android:id="@+id/image"
@@ -166,11 +167,12 @@
 
         <Button
             android:id="@+id/btn_submit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/brown"
             android:layout_gravity="center_horizontal"
             android:padding="12dp"
             android:text="Submit"/>
     </LinearLayout>
-
 </ScrollView>

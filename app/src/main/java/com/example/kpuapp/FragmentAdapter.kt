@@ -17,5 +17,4 @@ class FragmentAdapter (ac: AppCompatActivity): FragmentStateAdapter(ac){
         }
         return fragment as Fragment
     }
-
 }
