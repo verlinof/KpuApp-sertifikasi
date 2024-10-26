@@ -26,7 +26,5 @@ class MainActivity : AppCompatActivity() {
                     tab,position->tab.text= resources.getString((TAB_TITLES[position]))
             }.attach()
         }
-
-
     }
 }

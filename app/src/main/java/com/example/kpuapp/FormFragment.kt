@@ -81,6 +81,13 @@ class FormFragment : Fragment() {
         // Handle form submission
         binding.btnSubmit.setOnClickListener {
             saveData()
+
+            // Clear form fields
+            binding.textNama.text = null
+            binding.textNik.text = null
+            binding.DatePicker.text = null
+            binding.textAlamat.text = null
+            binding.textNoHP.text = null
         }
 
         return view
