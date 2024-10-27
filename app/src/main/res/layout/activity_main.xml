@@ -3,51 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
+    <!-- Header dengan Elevasi -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/black">
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="4dp">
 
-        <!-- Logo Image -->
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/logo"
-            android:contentDescription="KPU Logo"
-            android:layout_alignParentStart="true"
-            android:layout_margin="8dp"/>
+<!--        &lt;!&ndash; Logo Image &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/logo"-->
+<!--            android:contentDescription="KPU Logo"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginEnd="8dp"/>-->
 
-        <!-- KPU Name -->
+        <!-- Nama Aplikasi -->
         <TextView
+            android:id="@+id/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="KPU App"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/logo"
-            android:textColor="@android:color/white"
-            />
-
+            android:textColor="@android:color/black"
+            android:layout_marginHorizontal="10sp"
+            android:layout_centerVertical="true"/>
     </RelativeLayout>
+
+    <!-- Tab Layout -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/TabLayout"
         android:layout_width="match_parent"
-        android:background="@color/white"
         android:layout_height="wrap_content"
-        app:tabIndicatorAnimationMode="elastic"/>
+        android:background="@color/white"
+        android:elevation="2dp"
+        app:tabTextColor="@color/black"
+        app:tabIndicatorHeight="3dp"
+        app:tabIndicatorAnimationMode="elastic"
+        android:layout_marginBottom="4dp"/>
 
+    <!-- ViewPager dengan Margin dan Animasi -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.viewpager2.widget.ViewPager2>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp"
+        android:overScrollMode="never"/>
+
 </LinearLayout>

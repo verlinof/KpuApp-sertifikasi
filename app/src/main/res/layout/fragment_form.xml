@@ -4,175 +4,186 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
     tools:context=".FormFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:clipToPadding="false">
 
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form Data Diri"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nama -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:id="@+id/layout_nama"
-            android:hint="nama"
-            app:layout_constraintBottom_toTopOf="@+id/layout_password"
+            android:hint="Nama"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginBottom="12dp"
             app:endIconMode="clear_text">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_nama"
                 android:layout_width="match_parent"
-                android:textColor="@color/cream"
-                android:layout_height="match_parent"
-                android:id="@+id/text_nama" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- NIK -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:id="@+id/layout_nik"
-            android:hint="nik"
-            app:layout_constraintBottom_toTopOf="@+id/layout_password"
+            android:hint="NIK"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginBottom="12dp"
             app:endIconMode="clear_text">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_nik"
                 android:layout_width="match_parent"
-                android:textColor="@color/cream"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:inputType="number"
-                android:id="@+id/text_nik" />
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- No HP -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:id="@+id/layout_noHP"
             android:hint="No HP"
-            app:layout_constraintBottom_toTopOf="@+id/layout_password"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginBottom="12dp"
             app:endIconMode="clear_text">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_noHP"
                 android:layout_width="match_parent"
-                android:textColor="@color/cream"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:inputType="number"
-                android:id="@+id/text_noHP" />
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Jenis Kelamin -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jenis Kelamin"
-            android:layout_gravity="center_horizontal"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black" />
 
         <RadioGroup
             android:id="@+id/genderRadioGroup"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
 
             <RadioButton
                 android:id="@+id/radioMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:text="Pria"
                 android:textColor="@color/black"
-                android:layout_marginHorizontal="12dp"
-                android:text="Male" />
+                android:layout_marginEnd="24dp" />
 
             <RadioButton
                 android:id="@+id/radioFemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:text="Female" />
+                android:text="Wanita"
+                android:textColor="@color/black" />
         </RadioGroup>
 
+        <!-- Tanggal -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_DatePicker"
+            android:hint="Tanggal Lahir"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="tanggal"
-            android:layout_margin="16dp"
-            android:id="@+id/layout_DatePicker"
-            >
+            android:layout_marginBottom="12dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:id="@+id/DatePicker"
-                android:clickable="true"
-                android:textColor="@color/cream"
-                android:inputType="date"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:textColor="@color/black"
+                android:clickable="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-
+        <!-- Alamat -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:id="@+id/layout_Alamat"
             android:hint="Alamat"
-            app:layout_constraintBottom_toTopOf="@+id/layout_password"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginBottom="12dp"
             app:endIconMode="clear_text">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_Alamat"
                 android:layout_width="match_parent"
-                android:textColor="@color/cream"
-                android:layout_height="match_parent"
-                android:id="@+id/text_Alamat" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Cek Alamat Button -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/AddressCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginEnd="16dp"
-            android:paddingHorizontal="12dp"
-            android:background="@drawable/corner"
+            android:text="Cek Alamat"
             android:backgroundTint="@color/brown"
             android:textColor="@color/white"
-            android:text="cek alamat"/>
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="16dp" />
 
+        <!-- Gambar -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gambar"
-            android:textColor="@color/cream"
-            android:layout_gravity="center_horizontal"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_image"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="20dp"
-            android:clickable="true"
-            android:backgroundTint="@color/cream"
-            android:id="@+id/card_image">
+            android:layout_height="200dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            android:backgroundTint="@color/white">
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                />
+                android:scaleType="centerCrop" />
         </androidx.cardview.widget.CardView>
 
+        <!-- Submit Button -->
         <Button
             android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:text="Submit"
             android:backgroundTint="@color/brown"
-            android:layout_gravity="center_horizontal"
-            android:padding="12dp"
-            android:text="Submit"/>
+            android:textColor="@color/white"
+            android:paddingVertical="12dp" />
     </LinearLayout>
 </ScrollView>
