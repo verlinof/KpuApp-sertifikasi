@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
-
     // Deklarasi View Binding
     private lateinit var binding: ActivityLoginBinding
 

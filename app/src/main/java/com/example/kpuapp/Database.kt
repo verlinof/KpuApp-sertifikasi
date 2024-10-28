@@ -26,7 +26,7 @@ class Database(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         val createTable = ("CREATE TABLE $TABLE_NAME ("
                 + "$COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + "$COL_NAME TEXT,"
-                + "$COL_NIK TEXT,"
+                + "$COL_NIK TEXT UNIQUE,"
                 + "$COL_PHONE TEXT,"
                 + "$COL_GENDER TEXT,"
                 + "$COL_DATE TEXT,"

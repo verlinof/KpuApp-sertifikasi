@@ -2,6 +2,7 @@
     <string name="app_name">KPU</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Informasi">Informasi</string>
+    <string name="Lihat_data">Lihat Data</string>
     <string name="Tambah">Tambah Data</string>
+    <string name="informasi_aplikasi">Aplikasi ini digunakan oleh petugas Komisi Pemilihan Umum untuk mendata pengguna</string>
 </resources>

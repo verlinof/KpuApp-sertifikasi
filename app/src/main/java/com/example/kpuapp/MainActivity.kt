@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     companion object{
         private val TAB_TITLES = intArrayOf(
-            R.string.Informasi,
+            R.string.Lihat_data,
             R.string.Tambah
         )
     }

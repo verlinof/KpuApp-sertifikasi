@@ -161,6 +161,11 @@ class FormFragment : Fragment() {
     private fun saveData(){
         with(binding){
 
+            //Check length of nik
+            if (textNik.text.toString().length != 16) {
+                Toast.makeText(requireContext(), "NIK harus memiliki panjang 16", Toast.LENGTH_SHORT).show()
+                return
+            }
             val name = textNama.text.toString()
             val nik = textNik.text.toString()
             val noHp = textNoHP.text.toString()

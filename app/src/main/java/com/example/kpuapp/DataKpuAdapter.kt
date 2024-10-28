@@ -36,7 +36,7 @@ class DataKpuAdapter(
                 binding.itemImage.setImageResource(R.drawable.logo) // Use a placeholder if no image
             }
             binding.itemName.text = item.name
-            binding.itemNik.text = item.nik
+            binding.itemNik.text = "NIK : " + item.nik
             binding.root.setOnClickListener {
                 val intent = Intent(itemView.context, DetailDataActivity::class.java)
                 intent.putExtra("user_id", item.id)
