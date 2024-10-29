@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
                     showSuccessToast()  // Tampilkan toast kustom saat login berhasil
 
                     // Arahkan ke halaman Home
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, MenuActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
@@ -38,7 +38,6 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 
     private fun validateLogin(email: String, password: String): Boolean {

@@ -166,6 +166,7 @@ class FormFragment : Fragment() {
                 Toast.makeText(requireContext(), "NIK harus memiliki panjang 16", Toast.LENGTH_SHORT).show()
                 return
             }
+
             val name = textNama.text.toString()
             val nik = textNik.text.toString()
             val noHp = textNoHP.text.toString()

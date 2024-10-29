@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/button_informasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Informasi"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/button_lihat_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lihat Data"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/button_keluar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keluar" />
+</LinearLayout>
